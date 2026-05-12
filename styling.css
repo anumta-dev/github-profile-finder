@@ -26,6 +26,8 @@ h1 {
   display: flex;
   gap: 10px;
   margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
 }
 
 #username {
@@ -60,7 +62,8 @@ button:hover {
   background: white;
   border-radius: 20px;
   padding: 35px;
-  width: 340px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
   box-shadow: 0 10px 40px rgba(0,0,0,0.2);
   animation: fadeIn 0.4s ease;
@@ -140,4 +143,108 @@ a {
 
 a:hover {
   transform: scale(1.05);
+}
+/* ── Tablet (768px and below) ── */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #username {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px 20px;
+  }
+}
+
+/* ── Mobile (480px and below) ── */
+@media (max-width: 480px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  #username {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .card {
+    padding: 20px 15px;
+    border-radius: 16px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .stats {
+    padding: 12px 0;
+    margin: 15px 0;
+  }
+
+  .stat span:first-child {
+    font-size: 16px;
+  }
+
+  .stat span:last-child {
+    font-size: 11px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  a {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+/* ── Very Small (360px and below) ── */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 15px 10px;
+  }
 }
